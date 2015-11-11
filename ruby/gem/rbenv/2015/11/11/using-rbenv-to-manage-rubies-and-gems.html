@@ -62,19 +62,21 @@
   </header>
 
   <article class="post-content">
-    
+    <p>安装 rbenv</p>
+
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">brew update
 brew install rbenv</code></pre></div>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s1">&#39;eval &quot;$(rbenv init -)&quot;&#39;</span> &gt;&gt; ~/.zshrc
 <span class="nb">source</span> ~/.zshrc</code></pre></div>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">brew install rbenv-gem-rehash
-brew install ruby-build</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">brew install rbenv-gem-rehash</code></pre></div>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">rbenv versions
 rbenv install 2.2.3
 rbenv global 2.2.3</code></pre></div>
+
+<p>因为众所周知的原因，这里使用淘宝的源</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">which gem
 gem sources
