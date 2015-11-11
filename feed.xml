@@ -6,9 +6,70 @@
 </description>
     <link>http://blog.y-qq.com/</link>
     <atom:link href="http://blog.y-qq.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 11 Nov 2015 21:34:03 +0800</pubDate>
-    <lastBuildDate>Wed, 11 Nov 2015 21:34:03 +0800</lastBuildDate>
+    <pubDate>Wed, 11 Nov 2015 23:58:10 +0800</pubDate>
+    <lastBuildDate>Wed, 11 Nov 2015 23:58:10 +0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>make file 入门</title>
+        <description>&lt;p&gt;“make file” 顾名思义，就是要制造一个文件。&lt;/p&gt;
+
+&lt;p&gt;那如何制造一个文件呢？&lt;/p&gt;
+
+&lt;p&gt;我们拿车子来做个类比，比方说我们要造一辆车，就需要先造好方向盘，轮胎，发动机，座椅…，于是我们有了以下关系:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-makefile&quot; data-lang=&quot;makefile&quot;&gt;&lt;span class=&quot;nf&quot;&gt;车&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; 方向盘&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;轮胎&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;发动机&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;座椅...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;:&lt;/code&gt; 前面就是我们要造的东西，&lt;code&gt;:&lt;/code&gt; 后面是造这样东西所必需的零件。&lt;/p&gt;
+
+&lt;p&gt;那么如何造呢？在哪里描述制作过程呢？看下面的代码:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-makefile&quot; data-lang=&quot;makefile&quot;&gt;&lt;span class=&quot;nf&quot;&gt;车&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; 方向盘&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;轮胎&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;发动机&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;座椅...
+    把发送机安装在xxx
+    把轮胎安装在xxx上
+    把座椅固定在xxx上
+    ...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;所以，之后的所有操作 :&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;把发送机安装在xxx&lt;/code&gt; &lt;code&gt;把轮胎安装在xxx上&lt;/code&gt; &lt;code&gt;把座椅固定在xxx上&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;就是将零件拼装成车子的具体流程&lt;/p&gt;
+
+&lt;p&gt;那么 方向盘 轮胎 发动机 这些是怎么来的呢，聪明的你可能已经想到了&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-makefile&quot; data-lang=&quot;makefile&quot;&gt;&lt;span class=&quot;nf&quot;&gt;车&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; 方向盘&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;轮胎&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;发动机&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;座椅...
+    把发送机安装在xxx
+    把轮胎安装在xxx上
+    把座椅固定在xxx上
+    ...
+
+&lt;span class=&quot;nf&quot;&gt;方向盘&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; 模具..
+    把模具...
+
+&lt;span class=&quot;nf&quot;&gt;发动机&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; 气缸..
+    把气缸...
+
+&lt;span class=&quot;nf&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; ...
+    ...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;h3 id=&quot;section&quot;&gt;核心&lt;/h3&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;strong&gt;若所依赖文件的创建时间，晚于目标文件的创建时间，则重新创建目标文件&lt;/strong&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;递归生成所需要的文件&lt;/strong&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;p&gt;这两点就是 make file 的核心&lt;/p&gt;
+&lt;/blockquote&gt;
+
+</description>
+        <pubDate>Thu, 12 Nov 2015 06:00:00 +0800</pubDate>
+        <link>http://blog.y-qq.com/2015/11/12/make-file.html</link>
+        <guid isPermaLink="true">http://blog.y-qq.com/2015/11/12/make-file.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>使用 rbenv 管理 Rubies 和 Gems</title>
